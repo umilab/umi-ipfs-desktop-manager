@@ -15,6 +15,7 @@ import Files from '../panes/Files'
 import Pinned from '../panes/Pinned'
 import Info from '../panes/Info'
 import Settings from '../panes/Settings'
+import Apps from '../panes/Apps'
 
 const UNINITIALIZED = 'uninitialized'
 const STOPPED = 'stopped'
@@ -42,6 +43,16 @@ const panes = [
     id: 'peers',
     title: 'Peers',
     icon: 'pulse'
+  },
+  {
+    id: 'apps',
+    title: 'Apps',
+    icon: 'menu'
+  },
+  {
+    /*id:'',
+    tilte: '',
+    icon: ''*/
   },
   {
     id: 'settings',
@@ -191,6 +202,10 @@ class Menubar extends Component {
             files={this.state.pinned}
             pinning={this.state.pinning} />
         )
+      case 'apps':
+          return (
+            <Apps />
+          )
       default:
         return (
           <Pane className='left-pane'>

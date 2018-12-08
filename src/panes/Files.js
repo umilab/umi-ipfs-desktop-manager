@@ -146,8 +146,8 @@ class Files extends Component {
             <IconButton active={this.state.sticky} onClick={this.toggleStickWindow} icon='eye' />
 
             <div className='right'>
-              <IconButton onClick={this.selectFileDialog} icon='plus' />
-              <IconButton onClick={this.selectDirectoryDialog} icon='folder' />
+              <IconButton title='add file' onClick={this.selectFileDialog} icon='plus' />
+              <IconButton title='add from folder' onClick={this.selectDirectoryDialog} icon='folder' />
             </div>
           </Footer>
         </Pane>

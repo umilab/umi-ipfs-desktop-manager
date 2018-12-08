@@ -101,10 +101,10 @@ export default class FileBlock extends Component {
       unwrapped = (
         <div className='button-overlay'>
           { typeof this.props.copy === 'function' &&
-            <IconButton icon='clipboard' onClick={this.copy} />
+            <IconButton title='copy hash' icon='clipboard' onClick={this.copy} />
           }
           { typeof this.props.remove === 'function' &&
-            <IconButton icon='trash' color='#F44336' onClick={this.delete} />
+            <IconButton title='delete' icon='trash' color='#F44336' onClick={this.delete} />
           }
         </div>
       )

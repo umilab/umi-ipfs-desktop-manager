@@ -47,6 +47,7 @@ function fatal (error) {
     `Some unexpected error occurred and we couldn't handle it. Please check ${path.join(logsPath, 'error.log')}` +
     ` for the latest logs and open an issue on https://github.com/ipfs-shipyard/ipfs-desktop/issues.`
   )
+  dialog.showErrorBox(`Uncaught Exception:`,`${error.stack}`)
 
   process.exit(1)
 }
